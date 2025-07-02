@@ -1,0 +1,44 @@
+# Node/React (admin dashboard)
+node_modules/
+dist/
+build/
+.env
+.env.*
+
+# Python (if any zip Lambda helpers)
+__pycache__/
+*.pyc
+
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+.terraform.lock.hcl
+crash.log
+terraform.tfvars
+*.tfvars.backup
+
+# AWS CLI cache/credentials (local only)
+.aws/
+
+# Lambda build artifacts
+*.zip
+
+# VSCode / JetBrains / Editor configs
+.vscode/
+.idea/
+*.swp
+.DS_Store
+
+# Logs
+logs/
+*.log
+
+# Ignore generated diagrams or screenshots
+*.png
+*.svg
+
+# Ignore secrets & CI-specific files
+secrets.*
+*.pem
+*.key
