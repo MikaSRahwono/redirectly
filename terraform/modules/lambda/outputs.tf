@@ -6,10 +6,10 @@ output "redirect_url_arn" {
   value = aws_lambda_function.redirect_url.arn
 }
 
-output "auth_user_arn" {
-  value = aws_lambda_function.auth_user.arn
+output "stats_url_arn" {
+  value = aws_lambda_function.get_stats.arn
 }
 
-output "get_stats_arn" {
-  value = aws_lambda_function.get_stats.arn
+output "redirect_lambda_sg_id" {
+  value = aws_security_group.lambda_redirect_sg.id
 }
