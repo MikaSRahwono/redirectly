@@ -18,6 +18,8 @@ crash.log
 terraform.tfvars
 *.tfvars.backup
 
+enviromnets/
+
 # AWS CLI cache/credentials (local only)
 .aws/
 
