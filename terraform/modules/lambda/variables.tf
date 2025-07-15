@@ -28,7 +28,19 @@ variable "private_subnet_ids" {
   description = "Subnets for redirect Lambda to access Redis"
 }
 
-variable "redirect_lambda_sg_id" {
+variable "environment" {
   type        = string
-  description = "Security group ID for redirect Lambda"
+  description = "Deployment environment (e.g., dev, prod)"
 }
+
+variable "project_name" {
+  type        = string
+  description = "Name of the project for resource naming"
+}
+
+variable "vpc_id" {
+  type        = string
+  description = "ID of the VPC where Lambdas will be deployed"
+
+}
+

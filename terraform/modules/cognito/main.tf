@@ -1,5 +1,5 @@
 resource "aws_cognito_user_pool" "user_pool" {
-  name = var.pool_name
+  name = "${var.environment}-${var.project_name}-user-pool"
 
   auto_verified_attributes = ["email"]
 
@@ -20,16 +20,16 @@ resource "aws_cognito_user_pool" "user_pool" {
 }
 
 resource "aws_cognito_user_pool_client" "app_client" {
-  name         = "${var.pool_name}-client"
+  name         = "${var.environment}-${var.project_name}-client"
   user_pool_id = aws_cognito_user_pool.user_pool.id
 
-  generate_secret     = false
-  allowed_oauth_flows = ["code"]
-  callback_urls       = var.callback_urls
-  logout_urls         = var.logout_urls
+  generate_secret      = false
+  allowed_oauth_flows  = ["code"]
+  callback_urls        = var.callback_urls
+  logout_urls          = var.logout_urls
   allowed_oauth_scopes = ["email", "openid", "profile"]
 
-  supported_identity_providers = ["COGNITO"]
+  supported_identity_providers         = ["COGNITO"]
   allowed_oauth_flows_user_pool_client = true
 }
 

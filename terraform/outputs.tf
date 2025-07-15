@@ -18,10 +18,10 @@ output "dynamodb_table" {
   value = module.dynamodb.table_name
 }
 
-output "route53_admin_ui_url" {
-  value = module.route53.admin_ui_url
-}
+# output "route53_admin_ui_url" {
+#   value = module.route53.admin_ui_url
+# }
 
-output "route53_redirect_url" {
-  value = module.route53.redirect_url
-}
+# output "route53_redirect_url" {
+#   value = module.route53.redirect_url
+# }

@@ -1,5 +1,5 @@
-variable "name" {
-  description = "Prefix for resource naming"
+variable "project_name" {
+  description = "Name of the project for resource naming"
   type        = string
 }
 
@@ -22,4 +22,10 @@ variable "node_type" {
   description = "Instance type for Redis"
   type        = string
   default     = "cache.t3.micro"
+}
+
+variable "environment" {
+  description = "Deployment environment (e.g., dev, prod)"
+  type        = string
+
 }
