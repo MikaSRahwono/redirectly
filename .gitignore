@@ -17,8 +17,7 @@ __pycache__/
 crash.log
 terraform.tfvars
 *.tfvars.backup
-
-enviromnets/
+environments/
 
 # AWS CLI cache/credentials (local only)
 .aws/
