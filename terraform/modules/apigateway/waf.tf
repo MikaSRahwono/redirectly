@@ -1,5 +1,5 @@
 resource "aws_wafv2_web_acl" "api_waf" {
-  name        = "api-protection"
+  name        = "${var.environment}-${var.project_name}-api-protection"
   scope       = "REGIONAL"
   description = "Protect API Gateway from abuse"
 
@@ -23,7 +23,7 @@ resource "aws_wafv2_web_acl" "api_waf" {
 
     statement {
       rate_based_statement {
-        limit              = 1000  # 1000 requests per 5 minutes per IP
+        limit              = 1000 # 1000 requests per 5 minutes per IP
         aggregate_key_type = "IP"
       }
     }
